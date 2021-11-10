@@ -31,13 +31,20 @@ html {
     min-width: 400px;
 }
 
-#welcome-section>h1 {
+#welcome-section>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome-section>div>h1 {
     font-size: 56px;
     font-family: 'Raleway', sans-serif;
 }
 
-#welcome-section>p {
-    font-size: 26px;
+#welcome-section>div>p {
+    font-size: 36px;
     font-family: 'Poppins', sans-serif;
     font-style: italic;
     padding-top: 5px;
@@ -49,7 +56,7 @@ html {
     font-family: 'Raleway', sans-serif;
     margin: 10px;
     padding: 10px;
-    background-color: rgba(29, 51, 84);
+    background-color: rgba(29, 51, 84, 0.8);
     transition: 0.3s;
     border: none;
     cursor: pointer;
@@ -242,13 +249,16 @@ html {
 }
 
 @media (max-width: 1024px) and (max-height: 1024px) {
-    #welcome-section>h1 {
+    #welcome-section>div>h1 {
         font-size: 34px;
         font-family: 'Raleway', sans-serif;
     }
     
-    #welcome-section {
-        min-width: 400px;
+    #welcome-section>div>p {
+        font-size: 26px;
+        font-family: 'Poppins', sans-serif;
+        font-style: italic;
+        padding-top: 5px;
     }
 
     #resume-section {
@@ -285,62 +295,6 @@ html {
         margin-right: 25px;
     }
     
-    #resume-header>img:hover {
-        border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
-        box-shadow: 10px 10px rgba(0, 0, 0, .25);
-    }
-    
-    #card-links-container {
-        margin-top: 30px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .card-link>a>img {
-        margin-right: 5px;
-    }
-    
-    .card-link {
-        transition: transform 0.3s ease-out;
-        transition: 0.4s;
-        flex: 0 0 calc(25% - 20px);
-        color: white;
-        padding: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin: 10px;
-        border-left: 4px solid white;
-        text-decoration: none;
-    }
-    
-    .card-link:hover {
-        transform: translateX(10px);
-        color: #1D3354;
-        background-color: #E9FFF9;
-    }
-    
-    #accordion-container {
-        width: 60%;
-        margin-bottom: 30px;
-        min-width: 400px;
-    }
-    
-    .accordion {
-        background-color: #1D3354;
-        color: white;
-        cursor: pointer;
-        padding: 18px;
-        width: 100%;
-        text-align: left;
-        border: none;
-        outline: none;
-        transition: 0.4s;
-        border: 2px solid rgba(29, 51, 84, 0.8);
-        border-top-left-radius: 30px;
-        font-family: 'Raleway', sans-serif;
-    }
-    
     .active,
     .accordion:hover {
         background-color: #E9FFF9;
@@ -348,37 +302,6 @@ html {
         transform: translateY(-5px) translateX(-5px);
     }
     
-    .panel {
-        padding: 0 18px;
-        background-color: #467599;
-        max-height: 10px;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-        color: white;
-        font-family: 'Poppins', sans-serif;
-    }
-    
-    .resume-table>tbody>tr>td>a {
-        color: white;
-    }
-    
-    .resume-table>tbody>tr>th {
-        padding-right: 10px;
-    }
-    
-    .resume-table>tbody>tr {
-        transition: 0.4s ease-out;
-    }
-    
-    .resume-table>tbody>tr:hover {
-        color: #1D3354;
-        background-color: #E9FFF9;
-        transform: translateX(10px);
-    }
-    
-    .resume-table>tbody>tr:hover>td>a {
-        color: #1D3354;
-    }
     #footer {
         flex-direction: column;
         text-align: center;
